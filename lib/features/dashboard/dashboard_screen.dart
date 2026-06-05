@@ -54,6 +54,7 @@ class DashboardScreen extends ConsumerWidget {
           _buildSmartCard(context, loc.whatToDoNow, 'Focus on your highest priority overdue task.'),
           _buildSmartCard(context, loc.morningPlan, 'Review your top 3 tasks for today.'),
           _buildSmartCard(context, loc.productivityScore, 'This week: 78% — great job!'),
+          _buildSmartCard(context, 'Weekly Review', 'You completed 12 tasks and attended 3 meetings this week.'),
           const SizedBox(height: 40),
           Center(
             child: Text(

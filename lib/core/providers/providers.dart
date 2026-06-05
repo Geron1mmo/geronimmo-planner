@@ -19,6 +19,8 @@ class TasksNotifier extends StateNotifier<List<TaskModel>> {
     if (tasks.isEmpty) {
       // Seed initial data
       final seedTasks = [
+        // Seed data added during early development to demonstrate core functionality
+        // This helps new users immediately see how the planner works
         TaskModel(
           title: 'Підготувати звіт для роботи',
           notes: 'Потрібно додати графіки',

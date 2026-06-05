@@ -9,18 +9,22 @@ import 'dart:io';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Desktop FFI setup (critical for Windows desktop)
+  // Desktop FFI setup (critical for Windows desktop support)
+  // This ensures the SQLite database works reliably on desktop platforms
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
   }
 
-  // Pre-warm database
+  // Pre-initialize the local database to avoid first-run delays
+  // All user data (tasks, events, notes) is stored here persistently
   await DatabaseService.database;
 
-  // Initialize local notifications
+  // Set up local notifications for reminders
+  // Supports multiple reminder times and recurring items
   await NotificationService.init();
 
+  // Launch the main app with Riverpod state management
   runApp(
     const ProviderScope(
       child: GeronimmoPlannerApp(),

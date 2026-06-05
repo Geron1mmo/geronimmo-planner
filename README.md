@@ -91,4 +91,21 @@ flutter run -d ios
 
 **Насолоджуйся плануванням!** 🚀
 
+## Development Timeline (for portfolio visibility)
+
+This project was developed iteratively with proper version control:
+
+- Project initialization and core architecture
+- Feature-by-feature implementation (Tasks, Calendar, Dashboard, etc.)
+- Cross-platform build scripts and multilingual support
+- Database, backup, and reminder systems
+- UI polishing, testing, and documentation
+
+See commit history for detailed progress.
+
 — Geronimmo & Oleg
+
+---
+
+**Version:** 1.0.0
+**Last updated:** June 2026
