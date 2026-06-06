@@ -52,6 +52,7 @@ class SettingsScreen extends ConsumerWidget {
           ListTile(
             leading: const Icon(Icons.delete_forever, color: Colors.red),
             title: Text(loc.resetApp, style: const TextStyle(color: Colors.red)),
+            subtitle: const Text('Removes all local data. Use with caution.'),
             onTap: () => _resetApp(context, ref),
           ),
           const SizedBox(height: 40),
