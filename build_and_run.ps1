@@ -1,7 +1,7 @@
 # Geronimmo Planner - Build and Run Script for Windows
 # Run this after Flutter is installed.
 
-$flutterBin = "D:\flutter\bin"
+$flutterBin = "D:\Geronimmo_Planner\flutter\bin"
 if (Test-Path $flutterBin) {
     $env:Path = "$flutterBin;$env:Path"
     Write-Host "Flutter added to PATH for this session."

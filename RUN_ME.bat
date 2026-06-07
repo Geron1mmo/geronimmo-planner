@@ -4,12 +4,12 @@ echo.
 
 cd /d "%~dp0"
 
-echo Checking for Flutter at D:\flutter...
-if exist "D:\flutter\bin\flutter.bat" (
-    set "PATH=D:\flutter\bin;%PATH%"
+echo Checking for Flutter at D:\Geronimmo_Planner\flutter...
+if exist "D:\Geronimmo_Planner\flutter\bin\flutter.bat" (
+    set "PATH=D:\Geronimmo_Planner\flutter\bin;%PATH%"
     echo Flutter found and added to PATH.
 ) else (
-    echo Flutter not found at D:\flutter.
+    echo Flutter not found at D:\Geronimmo_Planner\flutter.
     echo Please wait for the download to finish or install Flutter manually.
     echo Then run this file again.
     pause
