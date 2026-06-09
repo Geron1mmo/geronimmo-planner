@@ -35,6 +35,7 @@ class AppLocalizations {
       'delete': 'Delete',
       'edit': 'Edit',
       'done': 'Done',
+      'priority': 'Priority',
       'priority_low': 'Low',
       'priority_medium': 'Medium',
       'priority_high': 'High',
@@ -146,6 +147,7 @@ class AppLocalizations {
       'delete': 'Видалити',
       'edit': 'Редагувати',
       'done': 'Готово',
+      'priority': 'Пріоритет',
       'priority_low': 'Низький',
       'priority_medium': 'Середній',
       'priority_high': 'Високий',
@@ -257,6 +259,7 @@ class AppLocalizations {
       'delete': 'Удалить',
       'edit': 'Редактировать',
       'done': 'Готово',
+      'priority': 'Приоритет',
       'priority_low': 'Низкий',
       'priority_medium': 'Средний',
       'priority_high': 'Высокий',
@@ -368,6 +371,7 @@ class AppLocalizations {
       'delete': 'Smazat',
       'edit': 'Upravit',
       'done': 'Hotovo',
+      'priority': 'Priorita',
       'priority_low': 'Nízká',
       'priority_medium': 'Střední',
       'priority_high': 'Vysoká',
@@ -480,6 +484,8 @@ class AppLocalizations {
   String get delete => _get('delete');
   String get edit => _get('edit');
   String get done => _get('done');
+  String get priority => _get('priority');
+  String get emptyStateGeneral => _get('empty_state_general');
   String get priorityLow => _get('priority_low');
   String get priorityMedium => _get('priority_medium');
   String get priorityHigh => _get('priority_high');

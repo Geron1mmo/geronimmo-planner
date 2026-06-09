@@ -131,8 +131,8 @@ class SettingsScreen extends ConsumerWidget {
       final data = jsonDecode(content) as Map<String, dynamic>;
       await DatabaseService.importData(data);
       // Refresh providers
-      await ref.read(tasksProvider.notifier)._load();
-      await ref.read(eventsProvider.notifier)._load();
+      await ref.read(tasksProvider.notifier).reload();
+      await ref.read(eventsProvider.notifier).reload();
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Import successful!')));
       }
@@ -158,8 +158,8 @@ class SettingsScreen extends ConsumerWidget {
 
     if (confirmed == true) {
       await DatabaseService.clearAllData();
-      await ref.read(tasksProvider.notifier)._load();
-      await ref.read(eventsProvider.notifier)._load();
+      await ref.read(tasksProvider.notifier).reload();
+      await ref.read(eventsProvider.notifier).reload();
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('App has been reset.')));
       }

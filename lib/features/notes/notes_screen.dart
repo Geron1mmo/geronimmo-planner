@@ -93,7 +93,7 @@ class _NotesScreenState extends ConsumerState<NotesScreen> {
                     children: [
                       const Icon(Icons.note_alt_outlined, size: 64, color: Colors.grey),
                       const SizedBox(height: 16),
-                      Text(loc.empty_state_general),
+                      Text(loc.emptyStateGeneral),
                       const SizedBox(height: 16),
                       ElevatedButton(
                         onPressed: _addNote,

@@ -35,7 +35,7 @@ class DashboardScreen extends ConsumerWidget {
             context,
             loc.today,
             todayTasks.isEmpty
-                ? Text(loc.empty_state_general)
+                ? Text(loc.emptyStateGeneral)
                 : Column(
                     children: todayTasks.map((t) => _taskCard(context, ref, t)).toList(),
                   ),

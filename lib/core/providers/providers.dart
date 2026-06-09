@@ -10,10 +10,10 @@ final tasksProvider = StateNotifierProvider<TasksNotifier, List<TaskModel>>((ref
 
 class TasksNotifier extends StateNotifier<List<TaskModel>> {
   TasksNotifier() : super([]) {
-    _load();
+    reload();
   }
 
-  Future<void> _load() async {
+  Future<void> reload() async {
     var tasks = await DatabaseService.getAllTasks();
 
     if (tasks.isEmpty) {
@@ -46,12 +46,12 @@ class TasksNotifier extends StateNotifier<List<TaskModel>> {
 
   Future<void> addOrUpdate(TaskModel task) async {
     await DatabaseService.insertOrUpdateTask(task);
-    await _load();
+    await reload();
   }
 
   Future<void> delete(String id) async {
     await DatabaseService.deleteTask(id);
-    await _load();
+    await reload();
   }
 
   Future<void> toggleComplete(TaskModel task) async {
@@ -67,10 +67,10 @@ final eventsProvider = StateNotifierProvider<EventsNotifier, List<EventModel>>((
 
 class EventsNotifier extends StateNotifier<List<EventModel>> {
   EventsNotifier() : super([]) {
-    _load();
+    reload();
   }
 
-  Future<void> _load() async {
+  Future<void> reload() async {
     var events = await DatabaseService.getAllEvents();
 
     if (events.isEmpty) {
@@ -103,12 +103,12 @@ class EventsNotifier extends StateNotifier<List<EventModel>> {
 
   Future<void> addOrUpdate(EventModel event) async {
     await DatabaseService.insertOrUpdateEvent(event);
-    await _load();
+    await reload();
   }
 
   Future<void> delete(String id) async {
     await DatabaseService.deleteEvent(id);
-    await _load();
+    await reload();
   }
 }
 
