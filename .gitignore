@@ -78,3 +78,8 @@ migrate_working_dir/
 # Project specific backups
 *.json.backup
 geronimmo_backup_*.json
+
+# Built executables (keep README instructions in repo)
+executables/windows/Geronimmo_Planner/
+executables/android/*.apk
+releases/
