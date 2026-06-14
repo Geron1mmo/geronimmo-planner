@@ -22,14 +22,14 @@ class TasksNotifier extends StateNotifier<List<TaskModel>> {
         // Seed data added during early development to demonstrate core functionality
         // This helps new users immediately see how the planner works
         TaskModel(
-          title: 'Підготувати звіт для роботи',
-          notes: 'Потрібно додати графіки',
+          title: 'Prepare work report',
+          notes: 'Add charts and summary section',
           priority: Priority.high,
           category: Category.work,
           dueDate: DateTime.now().add(const Duration(hours: 4)),
         ),
         TaskModel(
-          title: 'Купити продукти',
+          title: 'Buy groceries',
           priority: Priority.medium,
           category: Category.personal,
           dueDate: DateTime.now().add(const Duration(days: 1)),
@@ -77,15 +77,15 @@ class EventsNotifier extends StateNotifier<List<EventModel>> {
       final now = DateTime.now();
       final seedEvents = [
         EventModel(
-          title: 'Зустріч з командою',
+          title: 'Team standup',
           start: DateTime(now.year, now.month, now.day, 10, 0),
           end: DateTime(now.year, now.month, now.day, 11, 0),
-          location: 'Офіс / Zoom',
+          location: 'Office / Zoom',
           meetingType: MeetingType.work,
           colorHex: '#3B82F6',
         ),
         EventModel(
-          title: 'Тренування в залі',
+          title: 'Gym workout',
           start: DateTime(now.year, now.month, now.day, 18, 30),
           end: DateTime(now.year, now.month, now.day, 19, 30),
           meetingType: MeetingType.personal,

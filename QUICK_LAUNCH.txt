@@ -1,18 +1,16 @@
-=== Geronimmo Planner — Швидкий запуск ===
+=== Geronimmo Planner — Quick Launch ===
 
-WINDOWS (найпростіше):
-  Подвійний клік: D:\Geronimmo_Planner\RUN_GERONIMMO.bat
-  АБО напряму: D:\Geronimmo_Planner\executables\windows\Geronimmo_Planner\geronimmo_planner.exe
+WINDOWS:
+  Double-click: D:\Geronimmo_Planner\RUN_GERONIMMO.bat
+  Or run:       D:\Geronimmo_Planner\executables\windows\Geronimmo_Planner\geronimmo_planner.exe
 
 ANDROID:
-  Файл APK: D:\Geronimmo_Planner\executables\android\Geronimmo_Planner.apk
-  Скопіюй на телефон і встанови.
+  Install: D:\Geronimmo_Planner\executables\android\Geronimmo_Planner.apk
 
-Якщо треба перезібрати:
+REBUILD:
   cd D:\Geronimmo_Planner
   set JAVA_HOME=C:\Program Files\Android\Android Studio\jbr
   flutter build windows --release
   flutter build apk --release
 
-GitHub:
-  Див. GITHUB_SETUP.md — репозиторій підготовлений, залишилось увійти в GitHub і зробити push.
+GitHub: https://github.com/Geron1mmo/geronimmo-planner

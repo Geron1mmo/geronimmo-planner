@@ -1,75 +1,69 @@
 # Geronimmo Planner
 
-**Красивий, простий і швидкий планувальник** для життя, роботи, задач, зустрічей, нагадувань і нотаток.
+A clean, fast cross-platform planner built with **Flutter & Dart** — tasks, calendar, events, notes, and smart productivity tools.
 
-Створено: **Geronimmo & Oleg**
+**Authors:** Geronimmo & Oleg · **Version:** 1.0.0 · **Updated:** June 2026
 
-**Версія:** 1.0.0 · **Оновлено:** червень 2026
+[![Flutter](https://img.shields.io/badge/Flutter-3.22-02569B?logo=flutter)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.4-0175C2?logo=dart)](https://dart.dev)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Android-512BD4)]()
 
 ---
 
-## Швидкий запуск
+## Quick Start
 
 ### Windows
 
-Подвійний клік на один із файлів:
+Double-click either file:
 
-- `RUN_GERONIMMO.bat` — запускає готову програму
-- `executables\windows\Geronimmo_Planner\geronimmo_planner.exe` — портативна копія (можна на флешку)
+- `RUN_GERONIMMO.bat` — launches the app
+- `executables\windows\Geronimmo_Planner\geronimmo_planner.exe` — portable build (USB-friendly)
 
-> Не видаляй `flutter_windows.dll` і папку `data` поруч з exe.
+> Keep `flutter_windows.dll` and the `data` folder next to the exe.
 
 ### Android
 
-1. Скопіюй `executables\android\Geronimmo_Planner.apk` на телефон
-2. Увімкни встановлення з невідомих джерел (якщо потрібно)
-3. Відкрий APK і встанови
+1. Copy `executables\android\Geronimmo_Planner.apk` to your phone
+2. Enable install from unknown sources if prompted
+3. Open the APK and install
 
 ---
 
-## Що вже працює
+## Features
 
-- Повна підтримка **української, російської, чеської та англійської** мов (перемикач у Налаштуваннях)
-- **Задачі** — пріоритети, категорії, підзадачі, нотатки
-- **Календар** — місяць і список подій на день
-- **Події / зустрічі** — з кольорами та типами
-- **Смарт-дашборд** — прострочені задачі, «Що робити зараз?», ранковий план
-- **Нотатки** — швидке додавання і збереження
-- **Локальна база даних** — усі дані зберігаються на пристрої
-- **Експорт / імпорт** у JSON (резервна копія)
-- **Темна / світла тема** (системна)
-- Початкові демо-дані при першому запуску
+- **4 languages** — English, Ukrainian, Russian, Czech (switch in Settings)
+- **Tasks** — priorities, categories, subtasks, notes
+- **Calendar** — month view and daily event list
+- **Events** — color-coded meetings and reminders
+- **Smart dashboard** — overdue tasks, focus suggestions, morning plan
+- **Notes** — quick capture with local persistence
+- **SQLite database** — all data stays on device
+- **JSON backup** — export and import your data
+- **Dark / light theme** — follows system preference
+- Demo seed data on first launch
 
 ---
 
-## Збірка з вихідного коду
+## Build from Source
 
-У проєкті вже є вбудований Flutter: `flutter\bin\flutter.bat`
+Embedded Flutter SDK: `flutter\bin\flutter.bat`
 
 ```powershell
 cd D:\Geronimmo_Planner
-
-# Підготовка
 flutter pub get
 
 # Windows
 flutter build windows --release
-# Результат: build\windows\x64\runner\Release\geronimmo_planner.exe
 
-# Android (потрібен Android SDK + JDK з Android Studio)
+# Android
 set JAVA_HOME=C:\Program Files\Android\Android Studio\jbr
 flutter build apk --release
-# Результат: build\app\outputs\flutter-apk\app-release.apk
 ```
 
-### Вимоги для збірки
-
-| Платформа | Що потрібно |
-|-----------|-------------|
-| Windows   | Visual Studio 2022 з «Desktop development with C++» |
-| Android   | Android SDK, JDK 17+ (Android Studio) |
-
-Перевірка середовища:
+| Platform | Requirements |
+|----------|--------------|
+| Windows  | Visual Studio 2022 + Desktop development with C++ |
+| Android  | Android SDK + JDK 17+ (Android Studio) |
 
 ```powershell
 flutter doctor
@@ -77,45 +71,44 @@ flutter doctor
 
 ---
 
-## Структура проєкту
+## Project Structure
 
 ```
-lib/                  — код додатку (екрани, БД, локалізація)
-assets/               — іконки, зображення
-executables/windows/  — готова Windows-версія
-executables/android/  — готовий APK
-android/ ios/ windows/ — платформні файли Flutter
+lib/                  App code (screens, DB, i18n, theme)
+assets/               Icons and images
+executables/          Ready-to-run Windows & Android builds
+android/ ios/ windows/ Platform runners
 ```
 
 ---
 
-## Технології
+## Tech Stack
 
-- **Flutter** 3.22 · **Dart** 3.4
-- **Riverpod** — стан додатку
-- **SQLite** (sqflite + FFI) — локальна база
-- **go_router** — навігація
-- **table_calendar** — календар
-
----
-
-## GitHub
-
-Репозиторій: [github.com/Geron1mmo/geronimmo-planner](https://github.com/Geron1mmo/geronimmo-planner)
-
-Історія комітів показує поетапну розробку: задачі → календар → дашборд → локалізація → збірка під Windows/Android.
+- **Flutter 3.22** · **Dart 3.4**
+- **Riverpod** — state management
+- **SQLite** (sqflite + FFI) — local storage
+- **go_router** — navigation
+- **table_calendar** — calendar UI
 
 ---
 
-## Плани на майбутнє
+## Repository
 
-- Повноцінні форми для подій і повторень
-- Push-сповіщення при створенні нагадувань
-- Таймлайн і покращений вигляд календаря
-- Drag & drop подій
+[github.com/Geron1mmo/geronimmo-planner](https://github.com/Geron1mmo/geronimmo-planner)
+
+Commit history reflects iterative development: core architecture → features → i18n → cross-platform builds.
 
 ---
 
-**Насолоджуйся плануванням!**
+## Roadmap
+
+- Full event forms with recurrence
+- Push notifications for reminders
+- Timeline calendar view
+- Drag & drop scheduling
+
+---
+
+Built with focus. Shipped with care.
 
 — Geronimmo & Oleg

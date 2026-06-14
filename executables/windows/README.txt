@@ -1,10 +1,9 @@
-Geronimmo Planner - Windows
+Geronimmo Planner — Windows
 
-Запуск:
-  Подвійний клік на geronimmo_planner.exe у папці Geronimmo_Planner
-  АБО подвійний клік на RUN_GERONIMMO.bat у корені проєкту (D:\Geronimmo_Planner)
+Run:
+  Double-click geronimmo_planner.exe inside the Geronimmo_Planner folder
+  Or use RUN_GERONIMMO.bat in the project root (D:\Geronimmo_Planner)
 
-Важливо: не видаляйте папку data та файл flutter_windows.dll — вони потрібні для роботи програми.
+Important: do not delete the data folder or flutter_windows.dll.
 
-Перенос на інший ПК:
-  Скопіюйте всю папку Geronimmo_Planner на флешку або інший комп'ютер і запускайте exe.
+Portable: copy the entire Geronimmo_Planner folder to a USB drive or another PC.

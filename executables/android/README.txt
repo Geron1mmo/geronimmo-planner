@@ -1,13 +1,13 @@
-Geronimmo Planner - Android
+Geronimmo Planner — Android
 
-Встановлення:
-  1. Скопіюйте Geronimmo_Planner.apk на телефон
-  2. Увімкніть "Встановлення з невідомих джерел" (якщо потрібно)
-  3. Відкрийте APK і встановіть
+Install:
+  1. Copy Geronimmo_Planner.apk to your phone
+  2. Enable install from unknown sources if needed
+  3. Open the APK and install
 
-Файл: Geronimmo_Planner.apk (release, підписано debug-ключем для тестування)
+File: Geronimmo_Planner.apk (release build, debug-signed for testing)
 
-Перезбірка APK на ПК:
+Rebuild on PC:
   cd D:\Geronimmo_Planner
   set JAVA_HOME=C:\Program Files\Android\Android Studio\jbr
   flutter build apk --release
