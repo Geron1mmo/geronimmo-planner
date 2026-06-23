@@ -494,7 +494,7 @@ class AppLocalizations {
   String get statusInProgress => _get('status_in_progress');
   String get statusDone => _get('status_done');
   String get statusCancelled => _get('status_cancelled');
-  String category(String key) => _get('category_$key') ?? key;
+  String category(String key) => _get('category_$key');
   String get noTasks => _get('no_tasks');
   String get noEvents => _get('no_events');
   String get overdue => _get('overdue');
@@ -553,7 +553,7 @@ class AppLocalizations {
   String get quickAdd => _get('quick_add');
   String get event => _get('event');
   String get task => _get('task');
-  String meetingType(String key) => _get('meeting_type_$key') ?? key;
+  String meetingType(String key) => _get('meeting_type_$key');
 
   String _get(String key) {
     final lang = locale.languageCode;

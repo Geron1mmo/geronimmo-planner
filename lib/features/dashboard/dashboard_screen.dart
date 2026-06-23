@@ -90,7 +90,6 @@ class DashboardScreen extends ConsumerWidget {
   }
 
   Widget _taskCard(BuildContext context, WidgetRef ref, TaskModel task, {bool isOverdue = false}) {
-    final loc = AppLocalizations.of(Localizations.localeOf(context));
     return Card(
       color: isOverdue ? Colors.red.shade50 : null,
       child: ListTile(

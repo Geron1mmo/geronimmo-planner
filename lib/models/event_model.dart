@@ -1,5 +1,5 @@
 import 'package:uuid/uuid.dart';
-import 'recurrence.dart';
+import 'package:geronimmo_planner/models/recurrence.dart';
 
 enum MeetingType { personal, work, call, online, travel, other }
 

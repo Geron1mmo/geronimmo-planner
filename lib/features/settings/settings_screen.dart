@@ -71,7 +71,6 @@ class SettingsScreen extends ConsumerWidget {
   }
 
   void _showLanguagePicker(BuildContext context, WidgetRef ref) {
-    final loc = AppLocalizations.of(Localizations.localeOf(context));
     final languages = {
       'en': 'English',
       'uk': 'Українська',
@@ -121,9 +120,11 @@ class SettingsScreen extends ConsumerWidget {
       final dir = await getApplicationDocumentsDirectory();
       final files = dir.listSync().where((f) => f.path.endsWith('.json')).toList();
       if (files.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('No backup files found in Documents folder. Place a backup JSON there.')),
-        );
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('No backup files found in Documents folder. Place a backup JSON there.')),
+          );
+        }
         return;
       }
       final latest = files.last as File;

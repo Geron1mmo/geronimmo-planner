@@ -15,8 +15,8 @@ void main() {
     test('Weekly recurrence', () {
       final base = DateTime(2026, 6, 15);
       final rec = Recurrence(frequency: RepeatFrequency.weekly);
-      final occurrences = rec.generateOccurrences(base, base, base.add(const Duration(days: 20)));
-      expect(occurrences.length, 4);
+      final occurrences = rec.generateOccurrences(base, base, base.add(const Duration(days: 22)));
+      expect(occurrences.length, 4); // Jun 15, 22, 29, Jul 6
     });
   });
 }

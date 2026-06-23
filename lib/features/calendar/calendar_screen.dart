@@ -105,7 +105,7 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
       context: context,
       builder: (_) => StatefulBuilder(
         builder: (ctx, setState) => AlertDialog(
-          title: Text(existing == null ? loc.add + ' ' + loc.event : loc.edit),
+          title: Text(existing == null ? '${loc.add} ${loc.event}' : loc.edit),
           content: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -116,7 +116,7 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
                 ),
                 const SizedBox(height: 12),
                 ListTile(
-                  title: Text('Початок'),
+                  title: const Text('Початок'),
                   subtitle: Text(startTime.format(context)),
                   onTap: () async {
                     final picked = await showTimePicker(
@@ -173,7 +173,7 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
                   );
                 }
 
-                if (mounted) Navigator.pop(context);
+                if (context.mounted) Navigator.pop(context);
               },
               child: Text(loc.save),
             ),

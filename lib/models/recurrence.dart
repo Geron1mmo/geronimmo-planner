@@ -52,6 +52,7 @@ class Recurrence {
     return occurrences;
   }
 
+  @override
   String toString() {
     return 'Recurrence(${frequency.name},interval:$interval,end:${endDate?.toIso8601String()})';
   }
