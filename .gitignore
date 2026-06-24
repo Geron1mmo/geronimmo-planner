@@ -83,3 +83,11 @@ geronimmo_backup_*.json
 executables/windows/Geronimmo_Planner/
 executables/android/*.apk
 releases/
+
+# Local skill samples (not part of the app — avoid analyze noise)
+additional-skills/
+project-skills/
+skills-downloads/
+
+# Local Flutter SDK copy (use D:\flutter instead)
+flutter/

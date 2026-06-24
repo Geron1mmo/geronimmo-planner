@@ -106,10 +106,14 @@ class MainScaffold extends ConsumerWidget {
                   case 4: context.go('/settings'); break;
                 }
               },
-              labelType: NavigationRailLabelType.selected,
+              labelType: NavigationRailLabelType.all,
+              backgroundColor: Theme.of(context).colorScheme.surface,
+              selectedIconTheme: IconThemeData(color: Theme.of(context).colorScheme.primary, size: 28),
+              unselectedIconTheme: IconThemeData(color: Theme.of(context).colorScheme.onSurfaceVariant),
               destinations: destinations.map((d) => NavigationRailDestination(
                 icon: d.icon,
-                label: Text(d.label),
+                selectedIcon: Icon((d.icon as Icon).icon, color: Theme.of(context).colorScheme.primary),
+                label: Text(d.label, style: const TextStyle(fontWeight: FontWeight.w500)),
               )).toList(),
             ),
             const VerticalDivider(width: 1),
@@ -121,18 +125,32 @@ class MainScaffold extends ConsumerWidget {
 
     return Scaffold(
       body: child,
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: currentIndex,
-        onDestinationSelected: (index) {
-          switch (index) {
-            case 0: context.go('/'); break;
-            case 1: context.go('/calendar'); break;
-            case 2: context.go('/tasks'); break;
-            case 3: context.go('/notes'); break;
-            case 4: context.go('/settings'); break;
-          }
-        },
-        destinations: destinations,
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 10,
+              offset: const Offset(0, -2),
+            ),
+          ],
+        ),
+        child: NavigationBar(
+          selectedIndex: currentIndex,
+          onDestinationSelected: (index) {
+            switch (index) {
+              case 0: context.go('/'); break;
+              case 1: context.go('/calendar'); break;
+              case 2: context.go('/tasks'); break;
+              case 3: context.go('/notes'); break;
+              case 4: context.go('/settings'); break;
+            }
+          },
+          backgroundColor: Theme.of(context).colorScheme.surface,
+          indicatorColor: Theme.of(context).colorScheme.primaryContainer,
+          destinations: destinations,
+          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+        ),
       ),
     );
   }

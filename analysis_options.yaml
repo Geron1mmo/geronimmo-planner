@@ -16,3 +16,7 @@ analyzer:
     - "**/*.freezed.dart"
     - "build/**"
     - ".dart_tool/**"
+    - "additional-skills/**"
+    - "project-skills/**"
+    - "skills-downloads/**"
+    - "flutter/**"
